@@ -3,7 +3,7 @@ s72-slider .s72-slider-control {
   font-family: $font-family-base;
   height: $slider-control-height;
   width: $slider-control-width;
-  left: -$slider-control-width / 2;
+  left: 0;
   background-color: $slider-control-bg;
   border: 1px solid $slider-control-border;
   border-radius: 50%;
@@ -11,10 +11,12 @@ s72-slider .s72-slider-control {
   margin-top: 0;
 
   &.right {
-
-    right: -$slider-control-width / 2;
+    right: 0;
     left: auto;
 
+    .s72-icon {
+      margin-left: 1px;
+    }
   }
 
   .s72-icon {
@@ -31,6 +33,7 @@ s72-slider .s72-slider-control {
     // there might be a nice calculation here but, not all sites have a circle bordered control,
     // so this should be removed if its not needed.
     margin-top: -1px;
+    margin-left: -1px;
     // another wierd fix for prod (staging too) where for some reason the arrow does was appearing below the circle border.
     // I think (not sure why) the icon was actually getting display: block from somewhere else on local but not prod.
     display: inline-block;
@@ -39,10 +42,9 @@ s72-slider .s72-slider-control {
     // &.s72-icon-angle-right { margin-left: 18px; }
   }
 
-  &:hover, &:active, &:focus {
+  @include hover-focus {
     background: $slider-control-hover-bg;
   }
-
 }
 
 // make .slider-control be in the middle of the poster, not the middle of the item (which includes captions).
