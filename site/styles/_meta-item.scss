@@ -100,41 +100,6 @@
   .meta-item-tagline { font-size: $small-font-size; }
 }
 
-.meta-item-pricing-btn.s72-show {
-  display: block;
-
-  .s72-pricing-buttons {
-    margin-top: .5rem;
-  }
-
-  .s72-pricing-button-container {
-    display: flex;
-
-    .s72-btn {
-      flex: 1;
-    }
-  }
-
-
-  &.meta-item-pricing-btn-vertical .s72-pricing-button-container {
-    display: block;
-    flex: none;
-
-    &, .s72-btn {
-      width: 100%;
-    }
-
-    .s72-btn {
-      margin-left: 0;
-
-      &:nth-child(2){
-        margin-top: .5rem;
-      }
-    }
-  }
-
-}
-
 .featured-meta-item {
   overflow: hidden;
   border-radius: $meta-item-border-radius;
