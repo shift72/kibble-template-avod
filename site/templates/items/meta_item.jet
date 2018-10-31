@@ -43,8 +43,6 @@
                 </s72-cant-be-watched>
               {{end}}
             *}
-
-            <s72-pricing-buttons data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, item.ItemType)}}" class="meta-item-pricing-btn meta-item-pricing-btn-{{(layout == "landscape") ? "horizontal" : "vertical"}}"></s72-pricing-buttons>
           </div>
         {{end}}
       </div>

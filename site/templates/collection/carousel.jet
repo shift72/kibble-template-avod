@@ -1,30 +1,30 @@
 {{import "../items/featured_item.jet"}}
 {{block pageCollectionCarousel()}}
 	{{if len(.Items) > 0}}
-	{*
-		Image width and height are here to help with resizing, there might be another way doing it,
-		but I didnt want to have to rely on images loading like the web-core carousel.
-	*}
-	<s72-carousel data-image-width="1600" data-image-height="600">
-		<div class="page-collection page-collection-carousel">
-		<div class="carousel-slides">
-				{{range item := .Items}}
-				<div class="carousel-item">
-					{{yield featuredItem(item=item, image="Carousel")}}
-					</div>
-				{{end}}
+		{*
+			Image width and height are here to help with resizing, there might be another way doing it,
+			but I didnt want to have to rely on images loading like the web-core carousel.
+		*}
+		<s72-carousel data-image-width="1600" data-image-height="600">
+			<div class="page-collection page-collection-carousel">
+				<div class="carousel-slides">
+					{{range item := .Items}}
+						<div class="carousel-item">
+							{{yield featuredItem(item=item, image="Carousel")}}
+						</div>
+					{{end}}
+				</div>
+
+				<!-- <div class="carousel-pagination">
+					{{range index, item := .Items}}
+						<div class="carousel-page" data-page-index="{{index}}"><span class="fa fa-circle"></span></div>
+					{{end}}
+				</div> -->
+
+				<!-- Controls -->
+				<a class="left s72-carousel-control"><span class="s72-icon s72-icon-angle-left"></span></a>
+				<a class="right s72-carousel-control"><span class="s72-icon s72-icon-angle-right"></span></a>
 			</div>
-
-			<!-- <div class="carousel-pagination">
-				{{range index, item := .Items}}
-					<div class="carousel-page" data-page-index="{{index}}"><span class="fa fa-circle"></span></div>
-				{{end}}
-			</div> -->
-
-			<!-- Controls -->
-		<a class="left s72-carousel-control"><span class="s72-icon s72-icon-angle-left"></span></a>
-		<a class="right s72-carousel-control"><span class="s72-icon s72-icon-angle-right"></span></a>
-		</div>
-	</s72-carousel>
+		</s72-carousel>
 	{{end}}
 {{end}}

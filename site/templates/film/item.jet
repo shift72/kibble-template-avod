@@ -44,15 +44,13 @@
             {{yield metaItemTagline() film}}
           </div>
 
-          <div class="meta-detail-buttons">
-            <s72-pricing-buttons data-slug="{{film.Slug}}" data-title="{{film.Title}}"></s72-pricing-buttons>
-
-            {{if len(film.Trailers) > 0 }}
+          {{if len(film.Trailers) > 0 }}
+            <div class="meta-detail-buttons">
               <s72-can-be-watched data-slug="{{film.Slug}}">
                 <s72-modal-player src="{{film.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
               </s72-can-be-watched>
-            {{end}}
-          </div>
+            </div>
+          {{end}}
 
           <div class="meta-detail-synopsis">{{film.Overview | raw}}</div>
 

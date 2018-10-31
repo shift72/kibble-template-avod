@@ -1,7 +1,7 @@
 {
-  "name": "kibble-template-svod",
+  "name": "kibble-template-avod",
   "version": "0.0.1",
-  "description": "Base template for TVOD kibble sites",
+  "description": "Base template for AVOD kibble sites",
   "scripts": {
     "start": "npm run css && npm-run-all --parallel css:watch kibble:watch",
     "css": "node-sass ./site/styles/main.scss ./site/static/styles/main.css",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/indiereign/shift72-kibble-template-svod.git"
+    "url": "git+https://github.com/indiereign/shift72-kibble-template-avod.git"
   },
   "keywords": [
     "Kibble",
