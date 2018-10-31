@@ -32,7 +32,7 @@
         '{{CDN}}/s72.core.js',
         '{{CDN}}/s72.ui.js',
 
-        '/scripts/main.js',
+        '/scripts/main.js'
       ];
 
       // adapted (and modified) from: https://www.html5rocks.com/en/tutorials/speed/script-loading/

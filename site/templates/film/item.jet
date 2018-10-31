@@ -7,11 +7,6 @@
   {{yield seo() film}}
 {{end}}
 
-{* Hide Sub nav on this page *}
-{{block navigation()}}
-  {{yield nav(showSubNav=false)}}
-{{end}}
-
 {{block body()}}
   <div class="page page-film meta-detail meta-detail-film">
 

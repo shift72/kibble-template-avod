@@ -30,16 +30,16 @@
         {{if !isExternalPage}}
           <div class="meta-item-body hover">
 
-            <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn"></s72-play-button>
+            <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn meta-item-play-btn-{{layout}}"></s72-play-button>
 
             {{if isset(item.InnerItem["Tagline"])}}
               <div class="meta-item-synopsis">{{item.InnerItem.Tagline}}</div>
             {{end}}
 
             {{if isset(item["Trailers"]) && len(item.Trailers) > 0}}
-              <div class="buttons">
-                <s72-trailer-button data-slug="{{item.Slug}}" data-url="{{item.Trailers}}" data-use-tooltip="{{(layout == "landscape") ? true : false}}" button-class="btn-sm"></s72-trailer-button>
-              </div>
+              <s72-cant-be-watched data-slug="{{item.Slug}}">
+                <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+              </s72-cant-be-watched>
             {{end}}
           </div>
         {{end}}
@@ -47,7 +47,9 @@
 
       <div class="meta-item-caption">
         <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
-        {{yield metaItemTagline(genres=false) item.InnerItem}}
+        {{if item.ItemType != "tvseason"}}
+          {{yield metaItemTagline(genres=false) item.InnerItem}}
+        {{end}}
       </div>
     </a>
   </div>

@@ -4,7 +4,7 @@
 <div class="meta-item featured-meta-item meta-item-{{item.ItemType|lower}}">
   <a href="{{routeToSlug(item.Slug)}}">
     {{if isset(item.Images[image])}}
-      <s72-image src="{{item.Images[image]}}" alt="{{item.Title}}" class="poster-image poster-image-featured"></s72-image>
+      <s72-image src="{{item.Images[image]}}" alt="{{item.GetTranslatedTitle(i18n, "")}}" class="poster-image poster-image-featured"></s72-image>
     {{end}}
 
     <s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>
@@ -12,7 +12,7 @@
 
     {{if !isset(item["PageType"]) || item.PageType != "external"}}
       <div class="meta-item-body featured-meta-item-body">
-        <div class="meta-item-title">{{item.Title}}</div>
+        <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
 
         <div class="meta-item-text">
           {{yield metaItemTagline() item.InnerItem}}
@@ -25,7 +25,9 @@
         <div class="meta-item-buttons">
           <s72-play-button data-slug="{{item.Slug}}"></s72-play-button>
           {{if isset(item.InnerItem["Trailers"]) && len(item.InnerItem.Trailers) > 0}}
-            <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" class="btn-sm" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+            <s72-cant-be-watched data-slug="{{item.Slug}}">
+              <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" class="btn-sm" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+            </s72-cant-be-watched>
           {{end}}
         </div>
       </div>
