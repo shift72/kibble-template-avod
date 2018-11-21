@@ -41,6 +41,8 @@
   "homepage_header": { "other" : "Featured"},
   "page_collection_see_all": { "other" : "See All"},
 
+  "availability_available_till": { "other": "Available till {{.ExpiryDate}}" },
+
   "signup_page_header": { "other": "Create an Account" },
   "signup_form_name": { "other": "Name" },
   "signup_form_email": { "other": "Email address" },

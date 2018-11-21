@@ -126,18 +126,7 @@
             </div>
           {{end}}
 
-          {{if len(tvseason.Recommendations) > 0 }}
-            <div class="meta-detail-recommendations">
-              <h3>{{i18n("meta_detail_recommendations_title")}}</h4>
-              {{yield slider(itemsPerRow=6, itemLayout="portrait") content}}
-                {{range item := tvseason.Recommendations}}
-                  <div class="slider-item slider-item-6">
-                    {{yield metaItem(item=item, layout="portrait")}}
-                  </div>
-                {{end}}
-              {{end}}
-            </div>
-          {{end}}
+
 
         </div>
 
