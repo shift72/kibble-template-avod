@@ -1,6 +1,6 @@
 {
   "name": "kibble-template-avod",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Base template for AVOD kibble sites",
   "scripts": {
     "start": "npm run css && npm-run-all --parallel css:watch kibble:watch",
@@ -10,7 +10,7 @@
     "kibble": "kibble render",
     "kibble:watch": "kibble render --watch",
     "kibble:build": "kibble publish",
-    "build": "npm-run-all css:build kibble:build"
+    "build": "npm-run-all css css:build kibble:build"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,11 @@
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "bootstrap": "^4.0.0",
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.1.10",
     "font-awesome": "^4.7.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.12",
     "npm-run-all": "^4.0.2",
-    "postcss-cli": "^4.1.0",
-    "s72-kibble": "^0.10.8"
+    "postcss-cli": "^6.1.0",
+    "s72-kibble": "^0.10.13"
   }
 }
