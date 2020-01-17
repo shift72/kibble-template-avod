@@ -80,11 +80,28 @@
     padding-top: $grid-gutter-width / 2;
     @include make-col(8, 10);
   }
+
+  .meta-detail-tagline-and-classification {
+    @extend .d-flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 14px;
+    .s72-classification {
+      margin-right: 5px;
+    }
+    .meta-item-tagline {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0;
+      align-self: center;
+      line-height: 100%;
+    }
+  }
 }
 
 .meta-detail-title,
 .meta-detail-buttons,
-.meta-detail-tagline,
+.meta-detail-tagline-and-classification,
 .meta-detail-synopsis,
 .meta-detail-cast,
 .meta-detail-crew,
