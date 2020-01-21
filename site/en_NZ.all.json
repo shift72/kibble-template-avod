@@ -155,7 +155,7 @@
   "meta_detail_bonus_title": { "other": "Bonus Content" },
   "meta_detail_recommendations_title": { "other": "You may also like" },
 
-  "classification_intro": { "other": "Rating: " },
-  "classification_divider": { "other": " - " },
+  "classification_intro": { "other": "" },
+  "classification_divider": { "other": "" },
   "classification_outro": { "other": "" }
 }
