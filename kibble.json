@@ -1,8 +1,8 @@
 {
   "name": "kibble-template-avod",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "siteUrl": "https://staging-channel-kibble.shift72.com",
-  "builderVersion": "0.10.13",
+  "builderVersion": "0.10.16",
   "defaultLanguage": "en",
   "languages": {
     "en": "en_NZ"
